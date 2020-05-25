@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Ejemplo Vue</title>
+</head>
+<body>
+	
+	<div id="main">
+		<ul>
+			<li v-for="item in people">
+				{{ item }}
+				
+			</li>
+			<input type="text" v-model="name" v-on:keyup.enter="addname">
+				
+		</ul>
+		
+	</div>	
+		<script src="vue.js"></script>
+		<script>
+			var main = new Vue({
+				el:'#main',
+				data:{
+					people:['Lynda', 'Isabella' , 'Maria', 'Luisa']
+
+				},
+				name: '',
+				methods: {
+					addname: function(){
+						this.people.push(this.name)
+						this.name= ''
+					}
+				}
+			})
+
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div id="app-7">
+		<div class="container">
+			<ol>
+				<todo-item
+				v-for="item in groceryList"
+				v-bind:todo="item"
+				v-bind:key="item.id"></todo-item>
+			</ol>
+		</div>
+		
+	</div>
+<script src="vue.js"></script>
+<script src="script2.js"></script>
+</body>
+</html>

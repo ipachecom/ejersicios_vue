@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Data 1</title>
+</head>
+<body>
+
+	<div id="main">
+		<input type="text" v-model="info">
+		<p :title="info"> texto de relleno ... {{info }}</p>
+	</div>
+
+	
+	<script src="vue.js"></script>
+	<script >
+		var main = new Vue({
+			el: "#main",
+			data:{ info: ''
+
+			}
+		})
+		
+
+	</script>
+		
+	
+</body>
+</html>

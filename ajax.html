@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Data 1</title>
+</head>
+<body>
+
+	<div id="main" class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h1>Lista Vue-Ajax</h1>
+			</div>
+			<div class="col-sm-8">
+				<h1>Json</h1>
+				<pre>
+					{{ $data | json}}
+				</pre>
+			</div>
+		</div>
+		
+	</div>
+
+	
+	<script src="vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+	<script >
+		var urlUser = 'https://randomuser.me/api/?results=50';
+		var main = new Vue({
+			el: "#main",
+			created: function(){
+				this.getUsers();
+			},
+			data: { lists: []},
+			methods: {
+				getUsers: function(){
+					this.shttp.get(urlUser).then( function(response){
+						this.lists = response;
+					});
+				}
+			}
+			
+		})
+		
+
+	</script>
+		
+	
+</body>
+</html>

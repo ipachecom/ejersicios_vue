@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Data 1</title>
+</head>
+<body>
+
+	<div id="app">
+		{{ message}}
+		<span title="titulo del span"> este es otro ejemplo de un span </span>
+	</div>
+
+	<div id="app-2">
+		<span v-bind:title="message">
+			Mueva el mouse sobre mí durante unos segundos
+    para ver mi título enlazado dinámicamente.
+		</span>
+	</div>
+
+	<div id="app-3">
+		<span v-if="seen"> ahora me ves app 3</span>
+	</div>
+
+	<div id="app-4">
+		<ol>
+			<li v-for="todo in todos"> {{todo.text }}</li>
+		</ol>
+		
+	</div>
+
+	<div id="app-5">
+		<p> {{message }}</p>
+		<button class="btn btn-dark" v-on:click="reverseMessage" >message inverso</button>
+	</div>
+
+	<div id="app-6">
+		<p>{{ message}}</p>
+		<input type="text" v-model="message" >
+		
+	</div>
+
+	<script src="vue.js"></script>
+	<script src="script1.js"></script>
+		
+	
+</body>
+</html>
